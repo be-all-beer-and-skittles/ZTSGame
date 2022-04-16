@@ -12,40 +12,27 @@ public class PlayerIdeState : IState
 
     public int GetStateID()
     {
-        return (int)Player.PlayerState.Ide;
+        return (int)Player.EPlayerState.Ide;
     }
 
     public void OnEnter(GameStateMachine stateMachine, IState prevState, object param1, object param2)
     {
-        isUp = false;
+        m_Player.rigidbody.useGravity = true;
+        m_Player.rigidbody.isKinematic = false;
         Debug.Log("进入待机状态 上次的状态为 ：" + prevState);
     }
 
     public void OnLeave(IState nextState, object param1, object param2)
     {
+        m_Player.rigidbody.useGravity = false;
+        m_Player.rigidbody.isKinematic = true;
+
         Debug.Log("退出待机状态 下次的状态为 ：" + nextState);
     }
 
-    bool isUp = true;
     public void OnUpdate()
     {
         //可以添加待机动画，找一个就行
-        if (m_Player.transform.position.y >= 0.3)
-        {
-            isUp = false;
-        }
-        if (m_Player.transform.position.y <= 0.2)
-        {
-            isUp = true;
-        }
-        if (isUp)
-        {
-            m_Player.transform.position += new UnityEngine.Vector3(0.0f, 0.2f, 0.0f) * Time.deltaTime;
-        }
-        else
-        {
-            m_Player.transform.position -= new UnityEngine.Vector3(0.0f, 0.1f, 0.0f) * Time.deltaTime;
-        }
 
     }
 
