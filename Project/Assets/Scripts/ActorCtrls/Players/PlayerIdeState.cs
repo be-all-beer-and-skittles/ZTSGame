@@ -17,16 +17,11 @@ public class PlayerIdeState : IState
 
     public void OnEnter(GameStateMachine stateMachine, IState prevState, object param1, object param2)
     {
-        m_Player.rigidbody.useGravity = true;
-        m_Player.rigidbody.isKinematic = false;
         Debug.Log("进入待机状态 上次的状态为 ：" + prevState);
     }
 
     public void OnLeave(IState nextState, object param1, object param2)
     {
-        m_Player.rigidbody.useGravity = false;
-        m_Player.rigidbody.isKinematic = true;
-
         Debug.Log("退出待机状态 下次的状态为 ：" + nextState);
     }
 

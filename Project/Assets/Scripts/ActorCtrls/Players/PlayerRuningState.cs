@@ -34,19 +34,19 @@ public class PlayerRuningState : IState
 
         if (Input.GetKey(KeyCode.W))
         {
-            Move(new Vector3(0, 0, m_Player.transform.position.z), true);
+            Move(new Vector3(0, 0, m_Player.transform.position.z));
         }
         if (Input.GetKey(KeyCode.A))
         {
-            Move(new Vector3(m_Player.transform.position.x, 0, 0), false);
+            Move(new Vector3(-m_Player.transform.position.x, 0, 0));
         }
         if (Input.GetKey(KeyCode.S))
         {
-            Move(new Vector3(0, 0, m_Player.transform.position.z), false);
+            Move(new Vector3(0, 0, -m_Player.transform.position.z));
         }
         if (Input.GetKey(KeyCode.D))
         {
-            Move(new Vector3(m_Player.transform.position.x, 0, 0), true);
+            Move(new Vector3(m_Player.transform.position.x, 0, 0));
         }
     }
 
@@ -57,14 +57,10 @@ public class PlayerRuningState : IState
     public void OnLateUpdate()
     {
     }
-    /// <summary>
-    /// 控制人物的前后左右移动
-    /// </summary>
-    /// <param name="direction">移动的坐标轴</param>
-    /// <param name="Positive">是否为坐标轴的正方向</param>   
-    public void Move(Vector3 direction, bool Positive)
+
+    public void Move(Vector3 direction)
     {
-        m_Player.characterController.Move(direction * (Positive ? m_Player.maxMoveSpeed : -m_Player.maxMoveSpeed) * Time.deltaTime);
+        m_Player.rigidbody.velocity = direction * Time.deltaTime * m_Player.moveForce;
     }
     #endregion
 }

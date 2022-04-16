@@ -8,15 +8,12 @@ public class Player : MonoBehaviour
 
     public Transform childTransform;
 
-    public float maxMoveSpeed ;//最大移动速度
-    public float jumpSpeed;//起跳速度
-    public float jumpHeight;//起跳速度
-    public float gravity;//重力
+    public float moveForce;//移动力
+    public float jumpForce;//起跳力
 
-    public CharacterController characterController;
     public Rigidbody rigidbody;
 
-    bool isJump =false;
+    bool isJump = false;
     public enum EPlayerState
     {
 
@@ -60,29 +57,25 @@ public class Player : MonoBehaviour
     void playStateCtrl()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            jumpSpeed = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            playerGameStateMachine.SwitchState((int)EPlayerState.Runing, null, null);
+        }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
             playerGameStateMachine.SwitchState((int)EPlayerState.Jump, null, null);
-            isJump = true;
-        }
-        if (!isJump)
+
+        } else
         {
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-            {
-                playerGameStateMachine.SwitchState((int)EPlayerState.Runing, null, null);
-            }
-            else
-            {
-                playerGameStateMachine.SwitchState((int)EPlayerState.Ide, null, null);
-            }
+            playerGameStateMachine.SwitchState((int)EPlayerState.Ide, null, null);
+
         }
-
-
-
     }
 
 
+
+    
     public void jumpCB()
     {
         isJump = false;
