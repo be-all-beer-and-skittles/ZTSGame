@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
 
     public Transform childTransform;
 
-    public float moveForce;//移动力
-    public float jumpForce;//起跳力
+    public float moveForce;//移动 力
+    public float jumpForce;//起跳 力
 
     public Rigidbody rigidbody;
 
@@ -66,7 +66,8 @@ public class Player : MonoBehaviour
         {
             playerGameStateMachine.SwitchState((int)EPlayerState.Jump, null, null);
 
-        } else
+        }
+        else
         {
             playerGameStateMachine.SwitchState((int)EPlayerState.Ide, null, null);
 
@@ -75,7 +76,7 @@ public class Player : MonoBehaviour
 
 
 
-    
+
     public void jumpCB()
     {
         isJump = false;

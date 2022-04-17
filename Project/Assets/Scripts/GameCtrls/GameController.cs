@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 /// <summary>
 /// levelNames: Menu \level1\level2\level3\level4\level5
-/// 
+/// 这里是需求意义上的关卡名，实际除Menu外都在同一个场景中
 /// </summary>
 /// 
 public enum ELevel 

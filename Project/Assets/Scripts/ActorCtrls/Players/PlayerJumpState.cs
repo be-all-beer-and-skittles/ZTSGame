@@ -46,7 +46,6 @@ public class PlayerJumpState : IState
     #endregion
     void Jump()
     {
-        Debug.Log("Jump");
         m_Player.rigidbody.AddForce(Vector3.up * m_Player.jumpForce);
     }
 
