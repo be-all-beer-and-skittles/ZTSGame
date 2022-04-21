@@ -63,7 +63,8 @@ public class PlayerRuningState : IState
     /// <param name="direction">人物移动方向的向量</param>
     public void Move(Vector3 direction)
     {
-        m_Player.rigidbody.velocity = direction * Time.deltaTime * m_Player.moveForce;
+        //m_Player.rigidbody.velocity = direction * Time.deltaTime * m_Player.moveForce;
+        m_Player.transform.Translate(direction * Time.deltaTime);
     }
     #endregion
 }

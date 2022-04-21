@@ -10,10 +10,10 @@ public class Player : MonoBehaviour
 
     public float moveForce;//移动 力
     public float jumpForce;//起跳 力
+    public bool isJump = false;
 
     public Rigidbody rigidbody;
 
-    bool isJump = false;
     public enum EPlayerState
     {
 
@@ -56,29 +56,29 @@ public class Player : MonoBehaviour
 
     void playStateCtrl()
     {
-
-
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        //Debug.Log("isjump"+ isJump);
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            playerGameStateMachine.SwitchState((int)EPlayerState.Runing, null, null);
+            isJump = true;
         }
-        else if (Input.GetKeyDown(KeyCode.Space))
+        if (isJump)
         {
-            playerGameStateMachine.SwitchState((int)EPlayerState.Jump, null, null);
-
+           playerGameStateMachine.SwitchState((int)EPlayerState.Jump, null, null);
         }
         else
         {
-            playerGameStateMachine.SwitchState((int)EPlayerState.Ide, null, null);
-
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            {
+                playerGameStateMachine.SwitchState((int)EPlayerState.Runing, null, null);
+            }
+            else
+            {
+                playerGameStateMachine.SwitchState((int)EPlayerState.Ide, null, null);
+            }
         }
+
     }
 
 
 
-
-    public void jumpCB()
-    {
-        isJump = false;
-    }
 }
