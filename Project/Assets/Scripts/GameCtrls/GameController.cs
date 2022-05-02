@@ -18,7 +18,7 @@ public enum ELevel
     Level5
 }
 
-public class GameController : MonoSingleton<GameController>
+public class GameController : MonoBehaviour
 {
     public ELevel nowLevel = ELevel.Menu;
     // Start is called before the first frame update

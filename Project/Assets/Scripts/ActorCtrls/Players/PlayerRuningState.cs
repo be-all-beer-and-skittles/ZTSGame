@@ -32,6 +32,11 @@ public class PlayerRuningState : IState
     public void OnUpdate()
     {
 
+
+    }
+
+    public void OnFixedUpdate()
+    {
         if (Input.GetKey(KeyCode.W))
         {
             Move(new Vector3(0, 0, m_Player.transform.position.z));
@@ -50,10 +55,6 @@ public class PlayerRuningState : IState
         }
     }
 
-    public void OnFixedUpdate()
-    {
-    }
-
     public void OnLateUpdate()
     {
     }
@@ -64,7 +65,7 @@ public class PlayerRuningState : IState
     public void Move(Vector3 direction)
     {
         //m_Player.rigidbody.velocity = direction * Time.deltaTime * m_Player.moveForce;
-        m_Player.transform.Translate(direction * Time.deltaTime);
+        m_Player.transform.Translate(direction * Time.fixedDeltaTime);
     }
     #endregion
 }
