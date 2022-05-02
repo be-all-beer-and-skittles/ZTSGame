@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-
+    public Vector3 CamTargetPos = new Vector3();
     private Transform Player;
 
     public float speed = 1f;
@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 targetPos = this.Player.transform.position + new Vector3(0, 0.3f, -1.5f);
+        Vector3 targetPos = this.Player.transform.position + CamTargetPos;
         transform.position = Vector3.Lerp(transform.position, targetPos, speed * Time.deltaTime);
         // 这两个位置不能反哦
         Quaternion targetRotation = Quaternion.LookRotation(Player.position - transform.position);

@@ -371,6 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9e7ad09c51ced4aaecbbb3c1203e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CamTargetPos: {x: 0, y: 0.3, z: -1.5}
   speed: 1
 --- !u!1 &1131334451
 GameObject:
