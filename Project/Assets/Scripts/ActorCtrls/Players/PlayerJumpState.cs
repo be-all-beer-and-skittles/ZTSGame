@@ -40,19 +40,19 @@ public class PlayerJumpState : IState
         {
             if (Input.GetKey(KeyCode.W))
             {
-                Move(new Vector3(0, 0, 0.1f));
+                Move(new Vector3(0, 0, 1.0f));
             }
             if (Input.GetKey(KeyCode.A))
             {
-                Move(new Vector3(-0.1f, 0, 0));
+                Move(new Vector3(-1.0f, 0, 0));
             }
             if (Input.GetKey(KeyCode.S))
             {
-                Move(new Vector3(0, 0, -0.1f));
+                Move(new Vector3(0, 0, -1.0f));
             }
             if (Input.GetKey(KeyCode.D))
             {
-                Move(new Vector3(0.1f, 0, 0));
+                Move(new Vector3(1.0f, 0, 0));
             }
         }
     }
@@ -60,7 +60,7 @@ public class PlayerJumpState : IState
     public void OnFixedUpdate()
     {
         bool current = isGround;
-        isGround = Physics.Raycast(m_Player.transform.position, new Vector3(0, -1, 0), 0.18f, 1 << 9);
+        isGround = Physics.Raycast(m_Player.transform.position, new Vector3(0, -1, 0),m_Player.jumpheight, 1 << 9);
         if (isGround != current)
         {
             Groundcount++;
@@ -84,7 +84,7 @@ public class PlayerJumpState : IState
     }
     public void Move(Vector3 direction)
     {
-        m_Player.rigidbody.AddForce(direction.normalized * (m_Player.moveForce/10));
+        m_Player.rigidbody.AddForce(direction.normalized * (m_Player.jumpMoveForce));
         canJumpMove = false;
     }
 }

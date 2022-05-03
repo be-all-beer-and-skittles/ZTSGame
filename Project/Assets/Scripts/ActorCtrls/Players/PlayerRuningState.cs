@@ -39,19 +39,19 @@ public class PlayerRuningState : IState
     {
         if (Input.GetKey(KeyCode.W))
         {
-            Move(new Vector3(0, 0, 0.1f));
+            Move(new Vector3(0, 0, 1.0f));
         }
         if (Input.GetKey(KeyCode.A))
         {
-            Move(new Vector3(-0.1f, 0, 0));
+            Move(new Vector3(-1.0f, 0, 0));
         }
         if (Input.GetKey(KeyCode.S))
         {
-            Move(new Vector3(0, 0, -0.1f));
+            Move(new Vector3(0, 0, -1.0f));
         }
         if (Input.GetKey(KeyCode.D))
         {
-            Move(new Vector3(0.1f, 0, 0));
+            Move(new Vector3(1.0f, 0, 0));
         }
     }
 

@@ -7,9 +7,11 @@ public class Player : MonoBehaviour
     GameStateMachine playerGameStateMachine = new GameStateMachine();
 
     public Transform childTransform;
+    public float jumpheight = 0.18f;
 
     public float moveForce;//移动 力
     public float jumpForce;//起跳 力
+    public float jumpMoveForce;//起跳 力
     public bool isJump = false;
 
     public Rigidbody rigidbody;
@@ -60,6 +62,8 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             isJump = true;
+            StopCoroutine("forceToMove");
+            StartCoroutine("forceToMove");
         }
         if (isJump)
         {
@@ -78,7 +82,11 @@ public class Player : MonoBehaviour
         }
 
     }
-
+    IEnumerator forceToMove()
+    {
+        yield return new WaitForSeconds(1.0f);
+        isJump = false;
+    }
 
 
 }

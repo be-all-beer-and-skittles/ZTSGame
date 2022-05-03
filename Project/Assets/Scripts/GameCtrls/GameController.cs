@@ -21,8 +21,9 @@ public enum ELevel
 public class GameController : MonoBehaviour
 {
     public ELevel nowLevel = ELevel.Menu;
+    public string[] playersPos;
     // Start is called before the first frame update
-
+    GameObject player;
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -31,8 +32,17 @@ public class GameController : MonoBehaviour
     public void ChangeScence(ELevel level)
     {
         Debug.Log("当前场景：" + level.ToString());
+
+        if (nowLevel == ELevel.Menu)
+        {
+            SceneManager.LoadScene((int)level);
+        }
+        else
+        {
+            GameObject.Find("Player").transform.position =  GameObject.Find(playersPos[(int)level - 1]).transform.position;
+        }
         nowLevel = level;
-        SceneManager.LoadScene((int)level);
+
     }
 
     public void CloseGame()

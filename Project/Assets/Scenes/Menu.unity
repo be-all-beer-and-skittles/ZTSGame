@@ -151,6 +151,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nowLevel: 0
+  playersPos:
+  - Level1
+  - Level2
+  - Level3
+  - Level4
+  - Level5
 --- !u!4 &37606339
 Transform:
   m_ObjectHideFlags: 0
@@ -1085,10 +1091,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 797557436, guid: 20b5d7d9ea9e7784db08b183ff278141, type: 3}
-      propertyPath: m_Mass
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8822043299788688737, guid: 20b5d7d9ea9e7784db08b183ff278141,
         type: 3}
       propertyPath: m_RootOrder
@@ -1151,8 +1153,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8822043299788688742, guid: 20b5d7d9ea9e7784db08b183ff278141,
         type: 3}
-      propertyPath: moveForce
-      value: 10000
+      propertyPath: jumpForce
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822043299788688742, guid: 20b5d7d9ea9e7784db08b183ff278141,
+        type: 3}
+      propertyPath: jumpMoveForce
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20b5d7d9ea9e7784db08b183ff278141, type: 3}
