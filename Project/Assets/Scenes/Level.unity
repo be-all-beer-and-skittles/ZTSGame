@@ -552,7 +552,7 @@ PrefabInstance:
     - target: {fileID: 8822043299788688742, guid: 20b5d7d9ea9e7784db08b183ff278141,
         type: 3}
       propertyPath: jumpForce
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8822043299788688742, guid: 20b5d7d9ea9e7784db08b183ff278141,
         type: 3}
@@ -567,7 +567,7 @@ PrefabInstance:
     - target: {fileID: 8822043299788688742, guid: 20b5d7d9ea9e7784db08b183ff278141,
         type: 3}
       propertyPath: jumpMoveForce
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20b5d7d9ea9e7784db08b183ff278141, type: 3}
@@ -2568,6 +2568,99 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633147083}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1635915150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1635915151}
+  - component: {fileID: 1635915154}
+  - component: {fileID: 1635915153}
+  - component: {fileID: 1635915152}
+  m_Layer: 0
+  m_Name: DingZiPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1635915151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635915150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.291, y: 2.144403, z: -4.605401}
+  m_LocalScale: {x: 0, y: 0.01, z: 0.01}
+  m_Children: []
+  m_Father: {fileID: 1996670430}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1635915152
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635915150}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1635915153
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635915150}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1635915154
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635915150}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1652650579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2803,6 +2896,7 @@ Transform:
   - {fileID: 122672814465685234}
   - {fileID: 4298258278352463356}
   - {fileID: 469014806}
+  - {fileID: 1635915151}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2990,6 +3084,7 @@ GameObject:
   - component: {fileID: 7334898740063811286}
   - component: {fileID: 5831050981640143064}
   - component: {fileID: 602831185980239289}
+  - component: {fileID: 602831185980239290}
   m_Layer: 0
   m_Name: Useable_Xinxiban03
   m_TagString: Untagged
@@ -3011,6 +3106,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   msgUI: {fileID: 1652650579}
   canPass: 0
+--- !u!65 &602831185980239290
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602831185980239288}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.026598318, y: 0.042154398, z: 0.04758861}
+  m_Center: {x: 0.010038069, y: -0.00000013411045, z: -0.00000011920929}
 --- !u!23 &646337968573323880
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3266,6 +3374,7 @@ GameObject:
   - component: {fileID: 2303911340498484269}
   - component: {fileID: 956992067323374343}
   - component: {fileID: 1318662877279298495}
+  - component: {fileID: 1318662877279298496}
   m_Layer: 0
   m_Name: Useable_Xinxiban04
   m_TagString: Untagged
@@ -3287,6 +3396,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   msgUI: {fileID: 1652650579}
   canPass: 0
+--- !u!65 &1318662877279298496
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318662877279298494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.026598318, y: 0.042154398, z: 0.04758861}
+  m_Center: {x: 0.010038069, y: -0.00000013411045, z: -0.00000011920929}
 --- !u!33 &1353610908010009417
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3576,6 +3698,8 @@ GameObject:
   - component: {fileID: 3922210982024345180}
   - component: {fileID: 3307831459836647194}
   - component: {fileID: 5369611296911178514}
+  - component: {fileID: 2203598803081658215}
+  - component: {fileID: 2203598803081658216}
   m_Layer: 0
   m_Name: Useable_Neicuntiao01
   m_TagString: Untagged
@@ -3583,6 +3707,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2203598803081658215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203598803081658214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ce3f42e50d46c4988906b5cbcdd973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRoation: 1
+  msgBoard: {fileID: 602831185980239289}
+--- !u!65 &2203598803081658216
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203598803081658214}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.109463945, y: 0.08086678, z: 0.1217559}
+  m_Center: {x: 0.029715912, y: 0.0022884372, z: 0.03642963}
 --- !u!23 &2270640519719823874
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4661,6 +4812,8 @@ GameObject:
   - component: {fileID: 2527373650863386804}
   - component: {fileID: 6508987733700633179}
   - component: {fileID: 5210980296925503145}
+  - component: {fileID: 5579677253722285326}
+  - component: {fileID: 5579677253722285327}
   m_Layer: 0
   m_Name: Useable_Dianxian
   m_TagString: Untagged
@@ -4668,6 +4821,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5579677253722285326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5579677253722285325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ce3f42e50d46c4988906b5cbcdd973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRoation: 0
+  msgBoard: {fileID: 8911959776872636804}
+--- !u!65 &5579677253722285327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5579677253722285325}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08430956, y: 0.06842539, z: 0.0724072}
+  m_Center: {x: 0.03117787, y: -0.15801305, z: -0.30114496}
 --- !u!1 &5695845198636475675
 GameObject:
   m_ObjectHideFlags: 0
@@ -4912,6 +5092,8 @@ GameObject:
   - component: {fileID: 3112225846179895020}
   - component: {fileID: 7373306458199361360}
   - component: {fileID: 6692654408237208319}
+  - component: {fileID: 6337670236022658899}
+  - component: {fileID: 6337670236022658900}
   m_Layer: 0
   m_Name: Useable_Neicuntiao02
   m_TagString: Untagged
@@ -4919,6 +5101,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6337670236022658899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337670236022658898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ce3f42e50d46c4988906b5cbcdd973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRoation: 1
+  msgBoard: {fileID: 602831185980239289}
+--- !u!65 &6337670236022658900
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337670236022658898}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1461298, y: 0.052638985, z: 0.12701286}
+  m_Center: {x: 0.0480494, y: 0.0047980887, z: -0.035673667}
 --- !u!4 &6386932535203517522
 Transform:
   m_ObjectHideFlags: 0
@@ -4988,6 +5197,8 @@ GameObject:
   - component: {fileID: 5081163278178772202}
   - component: {fileID: 1293088674925355346}
   - component: {fileID: 3525985390608293975}
+  - component: {fileID: 6682839746317919426}
+  - component: {fileID: 6682839746317919427}
   m_Layer: 0
   m_Name: Useable_Fengshan
   m_TagString: Untagged
@@ -4995,6 +5206,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6682839746317919426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6682839746317919425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ce3f42e50d46c4988906b5cbcdd973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRoation: 1
+  msgBoard: {fileID: 1318662877279298495}
+--- !u!65 &6682839746317919427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6682839746317919425}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15567501, y: 0.26564386, z: 0.3269276}
+  m_Center: {x: 0.05074232, y: -0.069836155, z: 0.058464047}
 --- !u!23 &6692654408237208319
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5617,6 +5855,7 @@ GameObject:
   - component: {fileID: 5756942726306668996}
   - component: {fileID: 3053047249361592693}
   - component: {fileID: 8911959776872636804}
+  - component: {fileID: 8911959776872636805}
   m_Layer: 0
   m_Name: Useable_Xinxiban02
   m_TagString: Untagged
@@ -5638,6 +5877,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   msgUI: {fileID: 1652650579}
   canPass: 0
+--- !u!65 &8911959776872636805
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8911959776872636803}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.026598318, y: 0.042154398, z: 0.04758861}
+  m_Center: {x: 0.010038069, y: -0.00000013411045, z: -0.00000011920929}
 --- !u!23 &9005169955412098454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5711,6 +5963,7 @@ GameObject:
   - component: {fileID: 1788535497920093415}
   - component: {fileID: 7588349528300832516}
   - component: {fileID: 9169652836726490231}
+  - component: {fileID: 9169652836726490232}
   m_Layer: 0
   m_Name: Useable_Xinxiban05
   m_TagString: Untagged
@@ -5732,6 +5985,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   msgUI: {fileID: 1652650579}
   canPass: 0
+--- !u!65 &9169652836726490232
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9169652836726490230}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.026598318, y: 0.042154398, z: 0.04758861}
+  m_Center: {x: 0.010038069, y: -0.00000013411045, z: -0.00000011920929}
 --- !u!1 &9205586883305022488
 GameObject:
   m_ObjectHideFlags: 0

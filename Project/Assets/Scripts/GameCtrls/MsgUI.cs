@@ -19,8 +19,16 @@ public class MsgUI : MonoBehaviour
 
     private void NextBtnOnClick()
     {
-       gameController.ChangeScence((ELevel)((int)gameController.nowLevel+1));
-       this.gameObject.SetActive(false);
+        if (gameController.nowLevel!= ELevel.Level5)
+        {
+            gameController.ChangeScence((ELevel)((int)gameController.nowLevel + 1));
+            this.gameObject.SetActive(false);
+        }
+        else
+        {
+            OnGameEnd();
+        }
+
 
     }
 
@@ -28,5 +36,10 @@ public class MsgUI : MonoBehaviour
     void Update()
     {
         
+    }
+    void OnGameEnd()
+    {
+        Debug.Log("OnGameEnd");
+
     }
 }
