@@ -49,4 +49,8 @@ public class GameController : MonoBehaviour
     {
         Application.Quit();
     }
+    public void DestoryThis()
+    {
+        Destroy(this.gameObject);
+    }
 }

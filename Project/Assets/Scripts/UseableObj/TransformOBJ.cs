@@ -7,7 +7,7 @@ public class TransformOBJ : UseableObjBase
     // Start is called before the first frame update
     public bool isRoation;
     public MsgBoard msgBoard;
-
+    public Vector3 roationAngle;
     void Start()
     {
         
@@ -30,7 +30,7 @@ public class TransformOBJ : UseableObjBase
     }
     void OnRoation()
     {
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(-90, 0, 0), 0.05f);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(roationAngle), 0.05f);
         msgBoard.canPass = true;
 
     }
